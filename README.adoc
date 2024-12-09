@@ -1,0 +1,220 @@
+= Collaborative Project: Design Patterns and Refactoring in C++
+:author: Christophe Prud'homme, Vincent Chabannes
+:date: {docdate}
+:revdate: {docdate}
+:revnumber: 1.0
+:toc: macro
+:toclevels: 2
+
+toc::[]
+
+Each team will focus on two design patterns and their application to a scientific computing problem.
+
+== Team 1: Singleton and Factory Method Patterns
+
+=== Design Patterns Overview
+Singleton Pattern:: Ensures a class has only one instance and provides a global point of access to it.
+Factory Method Pattern:: Defines an interface for creating objects but allows subclasses to alter the type of objects that will be created.
+
+=== Application in Scientific Computing
+Problem:: Managing a global configuration for a simulation environment where multiple components need access to shared settings.
+Solution::
++
+- Implement a Singleton class to handle the global configuration, ensuring all components access the same instance.
+- Use the Factory Method pattern to create various simulation objects (e.g., solvers, models) based on configuration parameters, allowing for flexibility and scalability.
+
+== Team 2: Observer and Strategy Patterns
+
+=== Design Patterns Overview
+Observer Pattern:: Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+Strategy Pattern:: Defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it.
+
+=== Application in Scientific Computing
+Problem:: Developing a data analysis framework where multiple analysis modules need to respond to changes in data, and different algorithms can be applied to the data processing pipeline.
+Solution::
++
+- Use the Observer pattern to notify analysis modules of data changes, ensuring synchronization across modules.
+- Apply the Strategy pattern to allow dynamic selection of data processing algorithms, enabling the framework to adapt to various analysis requirements.
+
+== Team 3: Adapter and Composite Patterns
+
+=== Design Patterns Overview
+Adapter Pattern:: Allows incompatible interfaces to work together by acting as a bridge between two interfaces.
+Composite Pattern:: Composes objects into tree structures to represent part-whole hierarchies, allowing clients to treat individual objects and compositions uniformly.
+
+=== Application in Scientific Computing
+
+Problem:: Integrating legacy numerical libraries with new systems and representing complex mathematical expressions or computational processes hierarchically.
+Solution::
+  - Utilize the Adapter pattern to create interfaces that allow legacy code to interact seamlessly with new components.
+  - Implement the Composite pattern to model complex expressions or processes, enabling uniform treatment of both simple and composite entities within simulations or calculations.
+
+== General Instructions
+
+Each team must:
+
+- Present the theoretical aspects of their assigned design patterns.
+- Provide C++ implementation examples.
+- Demonstrate their application to the specified scientific computing problem.
+
+=== Objectives
+
+This project aims to provide students with a deep understanding of design patterns and their importance in software engineering, particularly in the context of scientific computing and machine learning. 
+By analyzing, implementing, and applying design patterns to real-world problems, students will learn how to write more maintainable, scalable, and reusable code. 
+The collaborative nature of the project encourages teamwork and communication, while the focus on C++ helps students gain hands-on experience with a language widely used in high-performance computing and scientific research. 
+Through this project, students will not only enhance their problem-solving skills but also bridge the gap between theoretical concepts and practical applications, preparing them for complex software development challenges in their academic and professional careers.
+
+=== Evaluation Criteria
+
+The evaluation of students will be based on how well they achieve the project objectives, demonstrating both technical and collaborative skills. 
+
+The breakdown is as follows:
+
+==== 1. Understanding of Design Patterns (30%)
+
+Criteria:: The team’s ability to explain the theoretical aspects of their assigned design patterns.
+
+Assessment::
++
+- Clarity and depth of the explanation of each pattern's purpose, structure, and use cases.
+- Use of diagrams or examples to illustrate how the patterns work.
+- Demonstrating the relevance of the chosen patterns to scientific computing.
+
+==== 2. Implementation Quality (30%)
+
+Criteria:: The correctness, completeness, and efficiency of the C++ implementation of the design patterns.
+
+Assessment::
++
+- Adherence to C++ best practices, including code readability, modularity, and proper use of object-oriented principles.
+- Correctness and functionality of the implementation.
+- Proper use of version control (e.g., meaningful commits, collaboration on GitHub).
+
+==== 3. Application to Scientific Computing (25%)
+
+Criteria:: The team’s ability to apply the design patterns to solve the assigned scientific computing problem.
+
+Assessment::
++
+- Relevance and innovation in using the design patterns to address the given problem.
+- Clear explanation of how the patterns simplify or improve the solution.
+- Demonstration of the implemented solution through appropriate examples, tests, or visualizations.
+
+==== 4. Team Collaboration and Communication (15%)
+
+Criteria:: How effectively the team worked together and communicated their findings.
+
+Assessment::
+- Evidence of collaboration through shared contributions on GitHub (e.g., pull requests, code reviews).
+- Equal participation and division of tasks among team members.
+- Clarity, professionalism, and organization in the final presentation or report.
+
+==== Bonus Points (Up to 10%)
+
+Criteria:: Going beyond the baseline requirements in creativity, innovation, or depth.
+
+Assessment::
++
+- Introduction of advanced features or optimizations in the implementation.
+- Exploration of additional applications or comparisons with alternative design patterns.
+- Exceptional clarity or creativity in the presentation.
+
+=== Deliverables
+
+1. *Documentation*: 
+   - A report or README file explaining the theoretical and practical aspects of the project.
+   - Clear comments in the code to describe functionality.
+   - Detailed use cases or test scenarios to demonstrate implementation.
+2. *Presentation*: 
+   - A concise presentation summarizing the key findings, implementation, and application.
+   - Use of diagrams, examples, or demonstrations to enhance understanding.
+3. *Code Repository*: 
+   - A well-maintained GitHub repository showing the history of work, including commits, branches, and pull requests.
+
+Here is the converted content in AsciiDoc format:
+
+=== References for Maintaining a Well-Structured GitHub Repository
+
+==== Official GitHub Documentation
+1. link:https://docs.github.com/en/repositories[GitHub Guide: Managing a Repository]
+   - Covers repository creation, collaboration, and settings.
+   - Best practices for organizing files and managing access.
+
+2. link:https://docs.github.com/en/pull-requests[GitHub Guide: Working with Pull Requests]
+   - Detailed instructions on creating, reviewing, and merging pull requests.
+   - Explains workflows for code collaboration and review.
+
+3. link:https://docs.github.com/en/get-started/using-git/viewing-the-commit-history[GitHub Guide: Understanding the Git Commit History]
+   - Explains how to view and interpret commit history.
+
+4. link:https://docs.github.com/en/actions[GitHub Actions]
+   - Introduces automating workflows for better repository maintenance.
+
+==== Best Practices and Community Guides
+1. link:https://git-scm.com/book/en/v2[Pro Git Book by Scott Chacon]
+   - Comprehensive resource for learning Git and managing repositories effectively.
+
+2. link:https://guides.github.com/introduction/flow/[GitHub Flow]
+   - A simple, effective workflow for collaborative GitHub projects.
+   - Focuses on branching strategies and pull request workflows.
+
+3. link:https://github.com/agis/git-style-guide[Git Style Guide]
+   - Community-driven best practices for Git workflows and commit messages.
+
+==== Tutorials and Articles
+1. link:https://www.atlassian.com/git/tutorials[Atlassian Git Tutorials]
+   - Guides for using Git and maintaining repositories with best practices.
+   - Includes topics on branching, commits, and pull requests.
+
+2. link:https://learngitbranching.js.org/[Learn Git Branching]
+   - Interactive tutorial for understanding branching concepts.
+
+3. link:https://github.blog/category/engineering/[GitHub Blog on Repository Best Practices]
+   - Features articles on repository management and effective collaboration.
+
+==== Key Elements of a Well-Maintained Repository
+
+Clear README::
++
+  - Provide a project overview, setup instructions, and usage guidelines.
+
+Branching Strategy::
++
+  - Follow a branching model like GitHub Flow or Git Flow.
+  - Use descriptive branch names, e.g., `feature/add-login`.
+
+Commit Message Guidelines::
++
+  - Write meaningful commit messages. Follow conventions like link:https://www.conventionalcommits.org/[Conventional Commits].
+
+Issue Tracking and Labels::
++
+  - Use GitHub Issues to manage tasks and apply labels for categorization.
+
+Pull Requests::
++
+  - Create detailed PR descriptions and link issues.
+  - Use reviews for feedback and maintain a history of discussions.
+
+Automation::
++
+  - Use GitHub Actions for CI/CD workflows and automated testing.
+
+Documentation::
++
+  - Include a `CONTRIBUTING.md` file for contribution guidelines.
+  - Use a `CHANGELOG.md` to track version history.
+
+==== Quick Start: GitHub Best Practices
+
+For a practical, hands-on start, follow this checklist:
+
+1. **Create a descriptive `README.md` with project details.**
+2. **Define a branching model and ensure all features are developed in branches.**
+3. **Use meaningful and concise commit messages.**
+4. **Regularly open pull requests and link them to issues.**
+5. **Automate testing and CI with GitHub Actions.**
+6. **Keep documentation up to date and well-organized.**
+
+
+
